@@ -42,45 +42,45 @@ public class ReportLibrary extends DataLibrary
 //			sassert.assertEquals(stepstatus, true);
 			
 		}
-		
-		protected  void reportEvent(boolean stepstatus,String PassMessage, String FailMessage,WebDriver driver,boolean takescrrenshot) 
-		{
-			if (stepstatus == true) 
-			{
-				System.out.println("		<<PASS>> " + PassMessage);
-				if (takescrrenshot==true) 
-				{
-					FrameworkVariables.getInstance().getExtentCurrentTest().log(LogStatus.PASS, PassMessage + FrameworkVariables.getInstance().getExtentCurrentTest().addScreenCapture(getScreenshot(driver)));
-				} 
-				else 
-				{
-					FrameworkVariables.getInstance().getExtentCurrentTest().log(LogStatus.PASS, PassMessage);
-				}
-			} 
-			else 
-			{
-				System.out.println("		<<FAIL>> " + FailMessage);
-				System.out.println("");
-				System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
-				System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
-				System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Exception description  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
-				FrameworkVariables.getInstance().getExceptionDescription().printStackTrace();
-				if (takescrrenshot==true) 
-				{
-					FrameworkVariables.getInstance().getExtentCurrentTest().log(LogStatus.FAIL, FailMessage + FrameworkVariables.getInstance().getExtentCurrentTest().addScreenCapture(getScreenshot(driver)));
-				} 
-				else 
-				{
-					FrameworkVariables.getInstance().getExtentCurrentTest().log(LogStatus.FAIL, FailMessage);
-				}
-			}
-//			Hard assertion
-			Assert.assertEquals(stepstatus, true);
-			
-			//soft assertion
-//			SoftAssert sassert= new SoftAssert();
-//			sassert.assertEquals(stepstatus, true);
-		}
+//		
+//		protected  void reportEvent(boolean stepstatus,String PassMessage, String FailMessage,WebDriver driver,boolean takescrrenshot) 
+//		{
+//			if (stepstatus == true) 
+//			{
+//				System.out.println("		<<PASS>> " + PassMessage);
+//				if (takescrrenshot==true) 
+//				{
+//					FrameworkVariables.getInstance().getExtentCurrentTest().log(LogStatus.PASS, PassMessage + FrameworkVariables.getInstance().getExtentCurrentTest().addScreenCapture(getScreenshot(driver)));
+//				} 
+//				else 
+//				{
+//					FrameworkVariables.getInstance().getExtentCurrentTest().log(LogStatus.PASS, PassMessage);
+//				}
+//			} 
+//			else 
+//			{
+//				System.out.println("		<<FAIL>> " + FailMessage);
+//				System.out.println("");
+//				System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+//				System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+//				System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Exception description  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+//				FrameworkVariables.getInstance().getExceptionDescription().printStackTrace();
+//				if (takescrrenshot==true) 
+//				{
+//					FrameworkVariables.getInstance().getExtentCurrentTest().log(LogStatus.FAIL, FailMessage + FrameworkVariables.getInstance().getExtentCurrentTest().addScreenCapture(getScreenshot(driver)));
+//				} 
+//				else 
+//				{
+//					FrameworkVariables.getInstance().getExtentCurrentTest().log(LogStatus.FAIL, FailMessage);
+//				}
+//			}
+////			Hard assertion
+//			Assert.assertEquals(stepstatus, true);
+//			
+//			//soft assertion
+////			SoftAssert sassert= new SoftAssert();
+////			sassert.assertEquals(stepstatus, true);
+//		}
 			public  void CreateNewExtentReportInResultsFolderWithDateAndTimeStamp()
 			{
 				// get current folder path

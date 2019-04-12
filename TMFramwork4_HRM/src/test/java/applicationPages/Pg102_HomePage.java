@@ -24,7 +24,7 @@ public class Pg102_HomePage extends HRMBasePage
 	public void clickOnMyInfo()
 	{
 		stepstatus = basepage.clickElement(MyInfo);
-		reportEvent(stepstatus, "Able to click On MyInfo", "UnAble to click On MyInfo", driver,true);
+		reportEvent(stepstatus, "Able to click On MyInfo", "UnAble to click On MyInfo", driver);
 	}
 	
 	@FindBy(how=How.XPATH,using="//a[text()='Contact Details']")
@@ -32,7 +32,7 @@ public class Pg102_HomePage extends HRMBasePage
 	public void clickOnContactDetails()
 	{
 		stepstatus = basepage.clickElement(ContactDetails);
-		reportEvent(stepstatus, "Able to click On ContactDetails", "UnAble to click On ContactDetails", driver,true);
+		reportEvent(stepstatus, "Able to click On ContactDetails", "UnAble to click On ContactDetails", driver);
 	}
 	
 	@FindBy(how=How.XPATH,using="//a[text()='Emergency Contacts']")
@@ -54,7 +54,7 @@ public class Pg102_HomePage extends HRMBasePage
 	public void selectCountry(String CountryName)
 	{
 		stepstatus = basepage.clickElement(country(CountryName));
-		reportEvent(stepstatus, "Able to click on Sign-In BUtton", "Unable to click on Sign-In Button",driver,true);
+		reportEvent(stepstatus, "Able to click on Sign-In BUtton", "Unable to click on Sign-In Button",driver);
 	}
 	
 	@FindBy(how=How.XPATH,using="//a[@id='welcome']")
